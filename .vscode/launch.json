@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Driver",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/driver",
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": false
+                }
+            ],
+            "preLaunchTask": "Build Project"
+        }
+    ]
+}
