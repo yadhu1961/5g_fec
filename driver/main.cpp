@@ -1,6 +1,9 @@
 #include <bitset>
+#include <cstdint>
 #include <iostream>
+#include <vector>
 
+#include "../math_ops/math_ops.h"
 #include "../modulation/modulation.h"
 
 int main() {
@@ -56,6 +59,17 @@ int main() {
   std::cout << "16 bit input, QAM256 Output: ";
   for (const auto& symbol : qam256Output) {
     std::cout << symbol << " ";
+  }
+  std::cout << std::endl;
+
+  // Test convolution operation
+  std::cout << "Testing convolution operation..." << std::endl;
+  std::vector<float> x = {1.1, 2.3, 3.6, 9.4, 8.8};
+  std::vector<float> h = {4.3, 5.2, 6.5};
+  auto convolutionOutput = math_ops::convolution(x, h);
+  std::cout << "Convolution Output: ";
+  for (const auto& value : convolutionOutput) {
+    std::cout << value << " ";
   }
   std::cout << std::endl;
 
