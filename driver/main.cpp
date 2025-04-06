@@ -64,9 +64,9 @@ int main() {
 
   // Test convolution operation
   std::cout << "Testing convolution operation..." << std::endl;
-  std::vector<float> x = {1.1, 2.3, 3.6, 9.4, 8.8};
-  std::vector<float> h = {4.3, 5.2, 6.5};
-  auto convolutionOutput = math_ops::convolution(x, h);
+  const std::vector<float> x = {1.1, 2.3, 3.6, 9.4, 8.8};
+  const std::vector<float> h = {4.3, 5.2, 6.5};
+  const auto convolutionOutput = math_ops::convolution(x, h);
   std::cout << "Convolution Output: ";
   for (const auto& value : convolutionOutput) {
     std::cout << value << " ";
