@@ -1,0 +1,50 @@
+{
+    "tasks": [
+        {
+            "label": "Build Project",
+            "type": "shell",
+            "command": "cmake --build build",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Build the project using CMake"
+        },
+        {
+            "label": "Configure CMake",
+            "type": "shell",
+            "command": "cmake -S . -B build",
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Run Project",
+            "type": "shell",
+            "command": "./build/driver",
+            "group": {
+                "kind": "test",
+                "isDefault": false
+            },
+            "problemMatcher": [],
+            "detail": "Run the driver executable"
+        },
+        {
+            "label": "Clean Project",
+            "type": "shell",
+            "command": "cmake --build build --target clean",
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": [],
+            "detail": "Clean the project by removing build artifacts"
+        }
+    ],
+    "version": "2.0.0"
+}
